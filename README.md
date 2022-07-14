@@ -64,3 +64,9 @@ You can clone this repository with `git clone https://github.com/cytronicoder/po
 chmod +x ./pointer-recognition/setup/nano.sh
 sudo ./pointer-recognition/setup/nano.sh
 ```
+
+After the setup for the Jetson Nano is finished, you can run the following command to run the docker container:
+
+```bash
+docker/run.sh
+```
