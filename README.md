@@ -44,15 +44,17 @@ Make sure you have the following:
 Learn more about the setup script in [SETUP.md](SETUP.md).
 
 #### Converting the model to ONNX format
-Now, you need to convert the Keras model to the ONNX format. First, create a folder named `models` in the `pointer-recognition` directory. Then, import your Keras model and save it as `model.h5` in the `models` directory.
+Now, you need to convert the Keras model to the ONNX format. First, create a folder named `models` in the `pointer-recognition` directory. Then, import your Keras model and save it as `keras_model.h5` in the `models` directory.
 
 After you have imported your Keras model, you can run the following command to convert the model to the ONNX format:
 
 ```bash
+python3 -m venv ~/tensorflow-metal
+source ~/tensorflow-metal/bin/activate
 python3 convert_keras_to_onnx.py
 ```
 
-You should now see an additional file named `model.onnx` in the `models` directory.
+You should now see an additional file named `onnx_model.onnx` in the `models` directory.
 
 ### Running on Jetson Nano
 #### Cloning the repository and setting up

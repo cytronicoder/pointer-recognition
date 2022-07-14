@@ -13,6 +13,9 @@ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge
 Then, `cd` into the project directory and run the following commands:
     
 ```bash
+python3 -m venv ~/tensorflow-metal
+source ~/tensorflow-metal/bin/activate
+
 chmod +x setup.sh
 ./setup.sh
 ```
