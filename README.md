@@ -85,13 +85,13 @@ sudo ldconfig
 To run the ONNX model on ImageNet, you need to first import the ONNX model into the newly created `build/aarch64/bin` directory. You can do this by running the following command:
 
 ```bash
-NET=~/pointer-recognition/models/
+NET=~/pointer-recognition
 ```
 
 Then, you can `cd` into the `build/aarch64/bin` directory and run the following command:
 
 ```bash
-./imagenet.py --ouput-codec=h264 /dev/video* rtp://192.168.15.100:1234 --model=$NET/onnx_model.onnx --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
+./imagenet.py --model=$NET/models/onnx_model.onnx --input_blob=image_inputs --output_blob=sequential_19 --labels=$NET/models/labels.txt $NET/tests/up.jpg up_edited.jpg
 ```
 
 ## Credits
