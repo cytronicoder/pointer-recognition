@@ -19,9 +19,8 @@ instance/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Models and test data
+# Models
 models/
-tests/
 
 # Miniforge
 Miniforge3-MacOSX-arm64.sh
