@@ -68,5 +68,6 @@ sudo ./pointer-recognition/setup/nano.sh
 After the setup for the Jetson Nano is finished, you can run the following command to run the docker container:
 
 ```bash
+cd jetson-inference
 docker/run.sh
 ```

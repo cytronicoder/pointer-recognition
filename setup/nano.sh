@@ -20,7 +20,3 @@ if [ -d "jetson-inference" ]; then
 else
     git clone --recursive https://github.com/dusty-nv/jetson-inference
 fi
-
-# cd into the jetson-inference directory
-echo "Running docker/run.sh..."
-cd jetson-inference
