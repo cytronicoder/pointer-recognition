@@ -96,5 +96,13 @@ Then, you can `cd` into the `build/aarch64/bin` directory and run the following 
 ./imagenet.py --model=$NET/models/onnx_model.onnx --input_blob=image_inputs --output_blob=sequential_19 --labels=$NET/models/labels.txt --ouput-codec=h264 /dev/video* rtp://192.168.15.100:1234
 ```
 
+## Impact
+This is a very simple project, but it is a good example of how to implement a Keras model in a Jetson Nano through the ONNX format and has a lot of potential for future applications. By training a model that can recognize the direction someone is pointing, we can create future applications for handheld devices that can be used to detect the direction someone is pointing and perform actions accordingly. For example:
+ 
+- If someone is pointing to the left, we can go to the previous page in a web browser and vice versa
+- If someone is pointing upwards, we can go to back the home screen of the device
+- If someone is pointing downwards, we can go to the notification bar of the device
+
+
 ## Credits
 Many thanks to [jetson-inference](https://github.com/dusty-nv/jetson-inference) for the inspiration for this project, and to [@iDTechHub](https://github.com/iDTechHub) for sending me the Jetson Nano Developer Kit and making everything possible for me to implement this project.
