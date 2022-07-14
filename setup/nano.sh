@@ -13,10 +13,13 @@ apt-get install git cmake
 # Clone the jetson-inference project
 echo "Cloning the jetson-inference project..."
 if [ -d "jetson-inference" ]; then
-    echo "jetson-inference directory detected. Skipping cloning..."
+    echo "jetson-inference directory detected. Updating..."
+    cd jetson-inference
+    git pull
+    cd ..
 else
     git clone --recursive https://github.com/dusty-nv/jetson-inference
-
+fi
 # Run docker/run.sh
 echo "Running docker/run.sh..."
 cd jetson-inference
