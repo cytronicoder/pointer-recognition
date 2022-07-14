@@ -1,5 +1,5 @@
 # Pointer Recognition with Jetson Nano
-For this project, I will be using the [Jetson Nano](https://nvidia.github.io/jetson-nano/) and a pre-trained ONNX model using Teachable Machine(https://teachablemachine.withgoogle.com/) to recognize the direction someone is pointing. This is a very simple project, but it is a good example of how to implement a Keras model in a Jetson Nano through the ONNX format.
+For this project, I will be using the [Jetson Nano](https://nvidia.github.io/jetson-nano/) and a pre-trained ONNX model using [Teachable Machine](https://teachablemachine.withgoogle.com/) to recognize the direction someone is pointing. This is a very simple project, but it is a good example of how to implement a Keras model in a Jetson Nano through the ONNX format.
 
 ## Prerequisites
 Make sure you have the following:
@@ -71,3 +71,6 @@ After the setup for the Jetson Nano is finished, you can run the following comma
 cd jetson-inference
 docker/run.sh
 ```
+
+## Credits
+Many thanks to [jetson-inference](https://github.com/dusty-nv/jetson-inference) for the inspiration for this project, and to [@iDTechHub](https://github.com/iDTechHub) for sending me the Jetson Nano Developer Kit and making everything possible for me to implement this project.
