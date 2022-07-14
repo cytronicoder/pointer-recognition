@@ -82,6 +82,8 @@ sudo ldconfig
 ```
 
 #### Running the ONNX model on ImageNet
+**This section is currently not working, as the ONNX model has dynamic or shape inputs, but no optimization profile has been defined yet. I might have to use TensorRT to optimize the model and add a profile.**
+
 To run the ONNX model on ImageNet, you need to first import the ONNX model into the newly created `build/aarch64/bin` directory. You can do this by running the following command:
 
 ```bash
@@ -91,7 +93,7 @@ NET=~/pointer-recognition
 Then, you can `cd` into the `build/aarch64/bin` directory and run the following command:
 
 ```bash
-./imagenet.py --model=$NET/models/onnx_model.onnx --input_blob=image_inputs --output_blob=sequential_19 --labels=$NET/models/labels.txt $NET/tests/up.jpg up_edited.jpg
+./imagenet.py --model=$NET/models/onnx_model.onnx --input_blob=image_inputs --output_blob=sequential_19 --labels=$NET/models/labels.txt --ouput-codec=h264 /dev/video* rtp://192.168.15.100:1234
 ```
 
 ## Credits
