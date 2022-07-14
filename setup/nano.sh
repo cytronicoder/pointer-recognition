@@ -2,7 +2,8 @@
 
 # Setting up the environment for the Jetson Nano
 
-# Update
+# Update the system
+echo "Updating the system..."
 apt-get update
 
 # Download git and cmake
