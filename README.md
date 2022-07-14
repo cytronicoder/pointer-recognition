@@ -65,11 +65,17 @@ chmod +x ./pointer-recognition/setup/nano.sh
 sudo ./pointer-recognition/setup/nano.sh
 ```
 
-After the setup for the Jetson Nano is finished, you can run the following command to run the docker container:
+After the setup for the Jetson Nano is finished, you can run the following commands (you may need sudo access):
 
 ```bash
 cd jetson-inference
-docker/run.sh
+mkdir build && cd build
+cmake ../
+```
+
+#### Running the ONNX model on ImageNet
+```bash
+imagenet.py --ouput-codec=h264 /dev/video* rtp://192.168.15.100:1234 --model=$NET/onnx_model.onnx --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
 ```
 
 ## Credits
