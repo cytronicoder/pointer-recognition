@@ -73,6 +73,14 @@ mkdir build && cd build
 cmake ../
 ```
 
+Once the process is finished, you can run the following commands
+
+```bash
+make
+sudo make install
+sudo ldconfig
+```
+
 #### Running the ONNX model on ImageNet
 To run the ONNX model on ImageNet, you need to first import the ONNX model into the newly created `build/aarch64/bin` directory. You can do this by running the following command:
 
@@ -83,7 +91,7 @@ NET=~/pointer-recognition/models/
 Then, you can `cd` into the `build/aarch64/bin` directory and run the following command:
 
 ```bash
-imagenet.py --ouput-codec=h264 /dev/video* rtp://192.168.15.100:1234 --model=$NET/onnx_model.onnx --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
+./imagenet.py --ouput-codec=h264 /dev/video* rtp://192.168.15.100:1234 --model=$NET/onnx_model.onnx --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
 ```
 
 ## Credits
