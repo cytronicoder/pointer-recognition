@@ -33,8 +33,8 @@ Make sure you have the following:
    - Once the developer kit is connected, you will be prompted to register an account
    - When you are finished registering, you can power off the Jetson Nano
 
-### Setting up locally
-#### Cloning the repository and setting up
+## Setting up locally
+### Cloning the repository and setting up
 **Note: This is the most time consuming part of the project - please follow the steps below carefully as you might need to troubleshoot some parts of the process.**
 
 1. Clone this repository with `git clone https://github.com/cytronicoder/pointer-recognition.git`.
@@ -43,7 +43,7 @@ Make sure you have the following:
 
 Learn more about the setup script in [SETUP.md](SETUP.md).
 
-#### Converting the model to ONNX format
+### Converting the model to ONNX format
 Now, you need to convert the Keras model to the ONNX format. First, create a folder named `models` in the `pointer-recognition` directory. Then, import your Keras model and save it as `keras_model.h5` in the `models` directory.
 
 After you have imported your Keras model, you can run the following command to convert the model to the ONNX format:
@@ -56,8 +56,8 @@ python3 convert_keras_to_onnx.py
 
 You should now see an additional file named `onnx_model.onnx` in the `models` directory.
 
-### Running on Jetson Nano
-#### Cloning the repository and setting up
+## Running on Jetson Nano
+### Cloning the repository and setting up
 You can clone this repository with `git clone https://github.com/cytronicoder/pointer-recognition.git` onto your Jetson Nano. Once you have cloned the repository, execute the following command:
 
 ```bash
@@ -81,7 +81,7 @@ sudo make install
 sudo ldconfig
 ```
 
-#### Running the ONNX model on ImageNet
+### Running the ONNX model on ImageNet
 **This section is currently not working, as the ONNX model has dynamic or shape inputs, but no optimization profile has been defined yet. I might have to use TensorRT to optimize the model and add a profile.**
 
 To run the ONNX model on ImageNet, you need to first import the ONNX model into the newly created `build/aarch64/bin` directory. You can do this by running the following command:
