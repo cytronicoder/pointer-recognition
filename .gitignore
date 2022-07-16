@@ -22,6 +22,3 @@ instance/
 # Models and test data
 models/
 tests/
-
-# Miniforge
-Miniforge3-MacOSX-arm64.sh
