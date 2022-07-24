@@ -19,6 +19,5 @@ instance/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Models and test data
-models/
+# Test data
 tests/

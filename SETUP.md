@@ -21,4 +21,4 @@
 **Notice: I have so far only tested the setup script on a macOS device with an M1 chip**, and I have not tested it on a macOS device with an Intel chip nor a Linux device. If you have any questions, please submit an issue on [GitHub](https://github.com/cytronicoder/pointer-recognition). Additionally, you can contribute to the project by submitting a pull request with additional setup scripts for other operating systems.
 
 ## Running on Google Colab
-**To be completed.**
+You will need to run `keras_to_onnx.ipynb` on Google Colab, as Colab has TensorFlow installed by default. Log in to Google Colab and create a new notebook. Then, create a `models` folder and import your Keras model into it as a `.h5` file. Then, run the notebook. You should see an ONNX model generated in the `models` folder.
